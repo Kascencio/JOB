@@ -1,18 +1,39 @@
 :root{font-family:Inter, system-ui, Arial, sans-serif;}
 body{margin:0;padding:16px;background:#f6f7fb;color:#111}
-.app{max-width:1000px;margin:0 auto;background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.app{max-width:1400px;width:calc(100vw - 32px);margin:0 auto;background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
 header{display:flex;justify-content:space-between;align-items:center}
 .actions button{margin-left:6px}
+.products{overflow-x:visible}
 .header-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
 .header-fields label{display:block;font-size:14px}
 .header-fields input,.header-fields textarea{width:100%;padding:6px;border:1px solid #ccc;border-radius:4px}
 .products h2{margin:8px 0}
-table{width:100%;border-collapse:collapse}
-th,td{border:1px solid #ddd;padding:6px;text-align:left}
-tbody td input{width:100%;box-sizing:border-box}
+table{width:100%;border-collapse:collapse;table-layout:fixed;min-width:0;font-size:12px}
+th,td{border:1px solid #ddd;padding:4px 5px;text-align:left;vertical-align:top}
+th:nth-child(1), td:nth-child(1){width:4.5%}
+th:nth-child(2), td:nth-child(2){width:5.5%}
+th:nth-child(3), td:nth-child(3){width:6%}
+th:nth-child(4), td:nth-child(4){width:30%}
+th:nth-child(5), td:nth-child(5){width:8%}
+th:nth-child(6), td:nth-child(6){width:8%}
+th:nth-child(7), td:nth-child(7){width:20%}
+th:nth-child(8), td:nth-child(8){width:7%}
+th:nth-child(9), td:nth-child(9){width:7%}
+th:nth-child(10), td:nth-child(10){width:4%}
+tbody td input{width:100%;box-sizing:border-box;min-width:0}
+.cant,.factor,.punit,.descuento,.tax-amount{font-size:12px}
+.uni,.desc{font-size:12px}
+.tax-cell{vertical-align:top}
+.tax-detail{display:block}
+.tax-detail summary{cursor:pointer;list-style:none;font-size:11px;font-weight:600;line-height:1.2}
+.tax-detail summary::-webkit-details-marker{display:none}
+.tax-options{display:grid;gap:3px;margin-top:4px;max-height:140px;overflow:auto;padding-right:2px}
+.tax-option{display:flex;gap:4px;align-items:flex-start;font-size:10px;line-height:1.15}
+.tax-option input{width:auto;margin-top:2px}
+.tax-amount{white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
 .summary{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
 .totales div{margin:4px 0}
 button{padding:6px 10px;border-radius:4px;border:1px solid #888;background:#fff;cursor:pointer}
 button:hover{background:#f0f0f0}
 
-@media(max-width:700px){.header-fields{grid-template-columns:1fr}.summary{flex-direction:column;align-items:flex-start}}
+@media(max-width:700px){.app{width:calc(100vw - 20px);padding:12px}.header-fields{grid-template-columns:1fr}.summary{flex-direction:column;align-items:flex-start}}

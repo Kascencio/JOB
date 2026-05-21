@@ -6,6 +6,7 @@ Cómo usar
 - Abre [index.html](index.html) en tu navegador (puedes usar Live Server o abrir el archivo directamente).
 - Rellena `Folio`, `Proveedor`, `RFC`, `Fecha` y `Comentario`.
 - Agrega productos con "Agregar producto" y completa `CANT`, `UNI`, `FACTOR`, `DESCRIPCIÓN`, `P. UNIT.`, `DESCUENTO`.
+- Si un artículo lleva impuesto, usa la columna `IMPUESTOS` y marca solo los que apliquen; si no lleva, déjalo vacío.
 - Pulsa `Guardar sesión` para guardar en el almacenamiento local del navegador; `Cargar sesión` para recuperarla.
 - Usa `Exportar PDF` para descargar un PDF o `Imprimir` para imprimir.
 

@@ -19,6 +19,7 @@
           <option value="/PLANTILLA/sample1.json">sample1</option>
           <option value="/PLANTILLA/sample2.json">sample2</option>
           <option value="/PLANTILLA/sample3.json">sample3</option>
+          <option value="/PLANTILLA/sample4.json">sample4</option>
         </select>
         <button id="btnLoadTemplate">Cargar plantilla</button>
         <button id="btnExport">Exportar PDF</button>
@@ -47,6 +48,8 @@
               <th>DESCRIPCIÓN</th>
               <th>P. UNIT.</th>
               <th>DESCUENTO</th>
+              <th>IMPUESTOS</th>
+              <th>IMP. $</th>
               <th>IMPORTE</th>
               <th></th>
             </tr>
@@ -66,7 +69,7 @@
         <div class="totales">
           <div>Subtotal: <span id="subtotal">$ 0.00</span></div>
           <div>Descuento: <span id="descuentoTotal">$ 0.00</span></div>
-          <div>I.V.A.: <span id="iva">$ 0.00</span></div>
+          <div>Impuestos: <span id="impuestos">$ 0.00</span></div>
           <div><strong>Total: <span id="total">$ 0.00</span></strong></div>
         </div>
       </section>
