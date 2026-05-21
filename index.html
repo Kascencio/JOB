@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automatizador Entradas - SICAR</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/html2pdf.js@0.9.3/dist/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Automatizador Entradas (SICAR)</h1>
+      <div class="actions">
+        <button id="btnSave">Guardar sesión</button>
+        <button id="btnLoad">Cargar sesión</button>
+        <select id="templateSelect">
+          <option value="">-- Plantilla --</option>
+          <option value="/PLANTILLA/sample1.json">sample1</option>
+          <option value="/PLANTILLA/sample2.json">sample2</option>
+          <option value="/PLANTILLA/sample3.json">sample3</option>
+        </select>
+        <button id="btnLoadTemplate">Cargar plantilla</button>
+        <button id="btnExport">Exportar PDF</button>
+        <button id="btnPrint">Imprimir</button>
+        <button id="btnClear">Limpiar</button>
+      </div>
+    </header>
+
+    <main id="document">
+      <section class="header-fields">
+        <label>Folio: <input id="folio" type="text" /></label>
+        <label>Proveedor: <input id="proveedor" type="text" /></label>
+        <label>RFC: <input id="rfc" type="text" /></label>
+        <label>Fecha: <input id="fecha" type="date" /></label>
+        <label>Comentario: <textarea id="comentario" rows="3"></textarea></label>
+      </section>
+
+      <section class="products">
+        <h2>Productos</h2>
+        <table id="tabla">
+          <thead>
+            <tr>
+              <th>CANT</th>
+              <th>UNI</th>
+              <th>FACTOR</th>
+              <th>DESCRIPCIÓN</th>
+              <th>P. UNIT.</th>
+              <th>DESCUENTO</th>
+              <th>IMPORTE</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="addRow">Agregar producto</button>
+      </section>
+
+      <section class="summary">
+        <div>
+          <div>Lineas: <span id="lineas">0</span></div>
+          <div>Total Unidades: <span id="totalUnidades">0.0</span></div>
+          <div>Moneda: <span id="moneda">MXN</span></div>
+          <div>Tipo de Cambio: <span id="tipoCambio">1.000000</span></div>
+        </div>
+        <div class="totales">
+          <div>Subtotal: <span id="subtotal">$ 0.00</span></div>
+          <div>Descuento: <span id="descuentoTotal">$ 0.00</span></div>
+          <div>I.V.A.: <span id="iva">$ 0.00</span></div>
+          <div><strong>Total: <span id="total">$ 0.00</span></strong></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

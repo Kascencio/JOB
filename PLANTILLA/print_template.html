@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Plantilla impresión</title>
+  <style>a {text-decoration: none} body{font-family: Lucida Sans, Arial, sans-serif}</style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+<!-- Copia estructural de la plantilla original con marcadores -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="50%">&nbsp;</td><td align="center">
+<table class="jrPage" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 612px; border-collapse: collapse; background-color: white;">
+  <!-- HEADER TOP (logos y datos estáticos) -->
+  <tr valign="top"><td colspan="28" style="height:64px"></td></tr>
+  <tr valign="top">
+    <td></td>
+    <td colspan="7" rowspan="12" style="text-align:center;vertical-align:top;padding-top:2px;">
+      <img src="LOGO.jpg" style="height:86px; display:block; margin-top:0; margin-left:0;" alt="EHMO" onerror="this.style.display='none'"/>
+    </td>
+    <td></td>
+    <td colspan="6" style="vertical-align:middle;text-align:left;">
+      <span style="font-weight:bold;font-size:9px">GRUPO OPERADOR DE ALIMENTOS EHMO</span>
+    </td>
+    <td></td>
+    <td colspan="11" rowspan="2" style="background-color:#F2F2F2;text-align:right;vertical-align:bottom;">Compra</td>
+    <td></td>
+  </tr>
+
+  <!-- Fecha superior -->
+  <tr valign="top"><td></td><td></td><td colspan="6" rowspan="2" style="vertical-align:middle;text-align:left;"><span style="font-weight:bold; font-size:10px">GOA180712SF5</span></td>
+  <td></td><td></td></tr>
+  <tr><td></td><td></td><td colspan="11" rowspan="2" style="text-align:right;font-weight:bold;color:#FF0000;">VILLA0010</td><td></td></tr>
+
+  <!-- Fecha corto (arriba derecha) -->
+  <tr valign="top"><td></td><td></td><td></td><td colspan="11" rowspan="3" style="text-align:right;vertical-align:middle;"><span id="fecha_top">{{FECHA_TOP}}</span></td><td></td></tr>
+
+  <!-- Localidad en header medio -->
+  <tr valign="top"><td></td><td colspan="26" style="border-top:1px solid #D0D0D0"></td><td></td></tr>
+
+  <!-- Fecha larga (header derecho) -->
+  <tr valign="top"><td></td><td colspan="26" style="text-align:right;font-weight:bold;">{{FECHA_LARGA}}</td><td></td></tr>
+
+  <tr valign="top"><td colspan="28" style="height:10px"></td></tr>
+
+  <!-- Nombre proveedor / RFC area -->
+  <tr valign="top">
+    <td></td>
+    <td colspan="14" style="vertical-align:bottom;text-align:left;font-weight:bold;">{{PROVEEDOR}}</td>
+    <td></td>
+    <td colspan="14" style="vertical-align:bottom;text-align:left;font-weight:bold;">{{RFC}}</td>
+  </tr>
+
+  <tr valign="top"><td colspan="28" style="height:6px"></td></tr>
+
+  <!-- Comentario / descripción grande -->
+  <tr valign="top"><td></td><td colspan="26" style="border-top:1px solid #D0D0D0;border-bottom:1px solid #D0D0D0;text-align:left;"><span style="font-size:9px">{{COMENTARIO}}</span></td><td></td></tr>
+
+  <!-- TABLA CABECERA DE PRODUCTOS -->
+  <tr valign="top">
+    <td></td>
+    <td colspan="2" style="background:#F2F2F2;text-align:right;font-weight:bold;">CANT</td>
+    <td colspan="4" style="background:#F2F2F2;text-align:center;font-weight:bold;">UNI<br/>FACTOR</td>
+    <td colspan="6" style="background:#F2F2F2;text-align:center;font-weight:bold;">DESCRIPCIÓN</td>
+    <td colspan="5" style="background:#F2F2F2;text-align:right;font-weight:bold;">P. UNIT.</td>
+    <td colspan="6" style="background:#F2F2F2;text-align:right;font-weight:bold;">DESCUENTO</td>
+    <td colspan="3" style="background:#F2F2F2;text-align:right;font-weight:bold;">IMPORTE</td>
+    <td></td>
+  </tr>
+
+  <!-- PRODUCTS -->
+  {{PRODUCTS}}
+
+  <!-- Totales -->
+  <tr valign="top"><td colspan="28" style="height:20px"></td></tr>
+  <tr valign="top">
+    <td></td>
+    <td colspan="5" style="background:#F2F2F2;text-align:right;font-weight:bold;">Lineas: </td>
+    <td colspan="4" style="text-align:right;">{{LINEAS}}</td>
+    <td colspan="7"></td>
+    <td colspan="6" style="background:#F2F2F2;text-align:right;font-weight:bold;">Subtotal: </td>
+    <td colspan="4" style="text-align:right;">{{SUBTOTAL}}</td>
+    <td></td>
+  </tr>
+  <tr valign="top">
+    <td></td>
+    <td colspan="5" style="background:#F2F2F2;text-align:right;font-weight:bold;">Total Unidades: </td>
+    <td colspan="4" style="text-align:right;">{{TOTAL_UNIDADES}}</td>
+    <td colspan="7"></td>
+    <td colspan="6" style="background:#F2F2F2;text-align:right;font-weight:bold;">Descuento: </td>
+    <td colspan="4" style="text-align:right;">{{DESCUENTO}}</td>
+    <td></td>
+  </tr>
+  <tr valign="top">
+    <td></td>
+    <td colspan="5" style="background:#F2F2F2;text-align:right;font-weight:bold;">Moneda: </td>
+    <td colspan="4" style="text-align:right;">{{MONEDA}}</td>
+    <td colspan="7"></td>
+    <td colspan="6" style="background:#F2F2F2;text-align:right;font-weight:bold;">I.V.A. </td>
+    <td colspan="4" style="text-align:right;">{{IVA}}</td>
+    <td></td>
+  </tr>
+  <tr valign="top">
+    <td></td>
+    <td colspan="5" style="background:#F2F2F2;text-align:right;font-weight:bold;">Tipo de Cambio: </td>
+    <td colspan="4" style="text-align:right;">{{TIPO_CAMBIO}}</td>
+    <td colspan="7"></td>
+    <td colspan="6" style="background:#F2F2F2;text-align:right;font-weight:bold;">Total: </td>
+    <td colspan="4" style="text-align:right;">{{TOTAL}}</td>
+    <td></td>
+  </tr>
+
+  <tr valign="top"><td colspan="28" style="height:56px"></td></tr>
+
+</table>
+</td><td width="50%">&nbsp;</td></tr></table>
+</body>
+</html>

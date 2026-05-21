@@ -1,0 +1,11 @@
+{
+  "folio": "MAF-VHSA0006",
+  "proveedor": "PROVEEDOR EJEMPLO",
+  "rfc": "RFC123456ABC",
+  "fecha": "2026-05-20",
+  "comentario": "REEMBOLSO MAFAN\nT. KONFIO, ENTRADA PARA WOONKIE 27 DE FEBERO Y ANTOJERIA MAF-VHSA0006\n20/05/2026",
+  "productos": [
+    {"cant":2.0,"uni":"PZA","factor":1.0,"desc":"[11621016] ESPATULA MISERABLE DE SILICON 16/40.5CM (24)","punit":75.862,"descAmt":0},
+    {"cant":1.0,"uni":"PZA","factor":1.0,"desc":"OTRO ARTICULO","punit":1223.138,"descAmt":0}
+  ]
+}

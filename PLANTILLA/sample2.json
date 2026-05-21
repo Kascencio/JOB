@@ -1,0 +1,8 @@
+{
+  "folio":"TPL-0002",
+  "proveedor":"PROVEEDOR 2",
+  "rfc":"RFC987654321",
+  "fecha":"2026-05-21",
+  "comentario":"Plantilla 2 - ejemplo",
+  "productos":[{"cant":3,"uni":"PZA","factor":1,"desc":"ITEM A","punit":100,"descAmt":0},{"cant":2,"uni":"PZA","factor":1,"desc":"ITEM B","punit":50,"descAmt":0}]
+}
