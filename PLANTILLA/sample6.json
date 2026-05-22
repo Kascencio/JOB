@@ -1,0 +1,8 @@
+{
+  "folio":"TPL-0003",
+  "proveedor":"FERNANDO ROCHA MANZANILLA",
+  "rfc":"ROMF8801035E1",
+  "fecha":"2026-05-21",
+  "comentario": "REEMBOLSO MAFAN\nT. KONFIO, ENTRADA PARA WOONKIE 27 DE FEBERO Y ANTOJERIA MAF-VHSA0006\n20/05/2026",
+  "productos":[{"cant":1,"uni":"PZA","factor":1,"desc":"ITEM X","punit":1375,"descAmt":0}]
+}

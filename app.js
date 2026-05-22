@@ -227,6 +227,20 @@
     SELECTORS.tabla.innerHTML=''; updateAll();
   }
 
+  function parseLocalDate(value){
+    if (!value) {
+      return null;
+    }
+
+    const parts = String(value).split('-').map(Number);
+    if (parts.length !== 3 || parts.some((part) => Number.isNaN(part))) {
+      return null;
+    }
+
+    const [year, month, day] = parts;
+    return new Date(year, month - 1, day, 12, 0, 0);
+  }
+
   function openPrintableWindow(html, title){
     const win = window.open('', '_blank', 'width=900,height=1200');
     if (!win) {
@@ -274,7 +288,7 @@
       return acc + calculateTaxBreakdown(base, p.taxes).net;
     }, 0);
     const totalValor = subtotalValor - descuentoValor + impuestosValor;
-    const fecha = SELECTORS.fecha.value ? new Date(SELECTORS.fecha.value) : null;
+    const fecha = parseLocalDate(SELECTORS.fecha.value);
     const fechaCorta = fecha ? fecha.toLocaleDateString('es-ES') : '';
     const fechaLarga = fecha ? 'VILLAHERMOSA, TABASCO, a ' + fecha.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
     const comentario = escapeHtml((SELECTORS.comentario.value || '').replace(/\n/g, ' '));
